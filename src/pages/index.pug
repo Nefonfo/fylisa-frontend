@@ -1,0 +1,75 @@
+extends ../templates/Main
+
+include ../components/generic/sliderBanner
+include ../components/generic/card.pug
+include ../components/generic/contactBanner.pug
+
+block variables
+    - let title = 'FYLISA - Bienvenido'
+
+block extra_css
+    link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+block content
+    style.
+        .fylisa-bg-banner {
+            background-image: url('../assets/filters/banner_filter_sm.png');
+
+        }
+
+        @media (max-width: 300px) {
+            .fylisa-bg-banner {
+                background-image: none;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .fylisa-bg-banner {
+                background-image: url('../assets/filters/banner_filter_xl.png');
+            }
+        }
+    .fylisa-bg-banner.bg-right.bg-contain.bg-no-repeat.w-full.flex.flex-wrap.justify-between
+        .flex.flex-wrap.flex-col(class="w-1/2 pl-2 md:pl-10 py-10 md:py-24")
+            h1(class="mb-1.5 text-5xl md:text-8xl font-light text-base-content") Dale
+            h1(class="mb-1.5 md:pl-12 text-7xl md:text-9xl font-medium text-neutral") Vida
+            h1(class="mb-1.5 text-4xl md:text-6xl font-light text-base-content") a tus
+            h1(class="text-5xl pl-3 md:pl-36 md:text-7xl font-bold text-secondary") Máquinas
+
+    .w-full.flex.justify-center.items-center.py-6.bg-primary.text-base-100.font-bold
+        .flex.flex-col(class="md:flex-row max-w-7xl")
+            .w-full.flex.flex-col.justify-center.items-center.px-6(class="md:w-1/2 lg:flex-grow md:items-start md:px-20")
+                h1.py-2.text-6xl.text-center(class="md:text-left md:text-8xl") Filtros
+                h2.mt-2.mb-4.text-2xl.text-center(class="md:text-left md:text-4xl") Construidos con la mejor calidad y a tu necesidad
+            .w-full.flex.justify-center.items-center(class="md:w-1/2 lg:w-auto px-4 md:px-auto lg:mx-20")
+                img(src='../assets/filters/filter_image.png' alt="filter")
+
+    +slider_banner(
+        'bg-info',
+        'text-primary',
+        null,
+        'Tenemos la solución que requieres'
+    )
+        each card in locals.filterSlider
+            +card(
+                card.title,
+                card.description,
+                card.linkText,
+                card.link,
+                card.image
+            )
+    +slider_banner(
+        'bg-neutral',
+        'text-base-100',
+        'Servicios',
+        'El mejor mantenimiento para tu equipo'
+    )
+        each card in locals.serviceSlider
+            +card(
+                card.title,
+                card.description,
+                card.linkText,
+                card.link,
+                card.image
+            )
+    +contact_banner('Contactanos', 'Nos interesan tus necesidades', 'Contacto', '#!')
+block extra_js
+    script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')

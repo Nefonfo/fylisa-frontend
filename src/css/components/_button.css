@@ -1,0 +1,16 @@
+@layer components {
+    .btn-fylisa {
+        @apply px-7 py-2;
+        @apply rounded-lg text-lg text-base-100 bg-primary shadow-button font-semibold transition-all duration-300 ease-in-out;
+    }
+
+    .btn-fylisa-sm {
+        @apply px-6 py-1.5;
+        @apply font-normal text-base;
+    }
+
+
+    .btn-fylisa:hover {
+        @apply shadow-buttonHover;
+    }
+}

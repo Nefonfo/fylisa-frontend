@@ -1,0 +1,13 @@
+mixin slider_banner(bg_color, text_color, title, text)
+    .flex.flex-wrap.flex-col.justify-center.items-center(class=bg_color+" "+text_color+" "+(!title || !text ? 'py-3 md:py-6': ''))
+        if title
+            h1.font-bold.text-center.mt-8(class='text-7xl md:text-8xl')= title
+        if text
+            h3.font-bold.text-center.px-10.py-4(class="md:py-6 md:px-auto md:max-w-lg"+" "+(!title && text ? 'text-3xl md:text-5xl': 'text-xl md:text-3xl'))= text
+        .swiper-container.overflow-hidden.w-full(class="px-6 lg:px-0 lg:pl-40 mb-6")
+            .swiper-wrapper.flex.items-center
+                block
+                a(href='#!').swiper-slide.flex.flex-wrap.h-auto.text-primary
+                    .card.more.flex.flex-col.justify-center.items-center
+                        i.fas.fa-arrow-right.fa-6x.mb-4
+                        h1.text-3xl Ver más

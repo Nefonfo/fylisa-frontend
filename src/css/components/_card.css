@@ -1,0 +1,71 @@
+@layer components {
+    .card {
+        @apply w-11/12 max-w-3xl mt-20 mb-6 py-6 px-3;
+        @apply bg-base-100 shadow-card rounded-2xl;
+        @media screen(lg) {
+            @apply my-6 ;
+        }
+    }
+
+    .card.more{
+        @apply w-11/12 h-auto;
+
+        @media screen(md) {
+            @apply w-1/3;
+        }
+    }
+
+
+    .card__content {
+        @apply flex items-center flex-col;
+
+        @media screen(lg) {
+            @apply flex-row;
+        }
+    }
+
+
+    .card__img {
+        @apply w-56 h-auto flex-shrink-0 transform -translate-y-20;
+
+        @media screen(md) {
+            @apply w-60;
+        }
+
+        @media screen(lg) {
+            @apply w-80 -translate-y-0 -translate-x-20;
+        }
+    }
+
+    .card__img img {
+        @apply shadow-card rounded-2xl w-full object-cover block;
+    }
+
+    .card__info {
+        @apply px-4 -mt-20;
+
+        @media screen(lg){
+            @apply pl-0 mt-0;
+        }
+    }
+
+    .card__info__title {
+        @apply font-bold text-2xl text-base-content mb-6 mt-6 text-center;
+
+        @media screen(lg) {
+            @apply text-4xl mt-0 text-left;
+        }
+    }
+
+    .card__info__text {
+        @apply text-lg text-base-300 leading-tight mb-7 text-justify;
+
+        @media screen(lg) {
+            @apply text-2xl;
+        }
+    }
+
+    .card__info__links {
+        @apply flex w-full justify-end;
+    }
+}

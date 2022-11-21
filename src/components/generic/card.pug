@@ -1,0 +1,11 @@
+mixin card(title, text, btn_text, url, img)
+    .swiper-slide.flex.justify-center
+        .card
+            .card__content
+                .card__img
+                    img(src=img alt='')
+                .card__info
+                    .card__info__title= title
+                    .card__info__text= text
+                    .card__info__links
+                        a.btn-fylisa(href=url)= btn_text
