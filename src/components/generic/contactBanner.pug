@@ -1,12 +1,12 @@
 mixin contact_banner(title, subtitle, text_button, href_button)
-    .w-full.flex.flex-wrap.justify-center.items-centerbg-white(class="dark:bg-night-900")
+    .w-full.flex.flex-wrap.justify-center.items-center
         .w-full.flex.flex-wrap(class="max-w-7xl")
             .w-full.flex.flex-wrap.flex-col.justify-center.items-center(class="md:w-1/2 md:order-last")
-                h1.text-5xl.font-bold.text-fylisa-900.my-6(class="dark:text-fylisa-200 md:text-6xl")= title
-                h3.text-2xl.font-bold.text-fylisa-200.max-w-xs.text-center.mb-8(class="md:text-3xl")= subtitle
+                h3.text-5xl.font-bold.text-primary.my-6(class="md:text-6xl")= title
+                p.text-2xl.font-bold.text-neutral.max-w-xs.text-center.mb-8(class="md:text-2xl")= subtitle
                 a.btn-fylisa.mb-10(href=href_button)= text_button
             .w-full.flex.flex-wrap.mb-10(class="px-4 md:w-1/2 md:p-10")
-                svg(width='632' height='495' viewbox='0 0 632 495' fill='none' xmlns='http://www.w3.org/2000/svg')
+                svg(viewbox='0 0 632 495' fill='none' xmlns='http://www.w3.org/2000/svg')
                     path(class='fill-neutral' fill-rule='evenodd' clip-rule='evenodd' d='M629.774 187.06C621.966 249.713 613.152 282.808 561.708 348.422C510.264 414.034 274.854 457.198 187.823 457.198C100.792 457.198 -6.46423 384.975 0.305004 301.292C7.07424 217.609 42.3903 149.214 126.921 140.794C213.306 132.189 289.189 172.035 374 150.665C447.323 132.189 469.757 61.766 520.117 39.5478C621.966 -5.38686 635.086 144.437 629.774 187.06Z')
                     path(class='fill-base-100' d='M577.376 217.66C574.498 222.909 538.072 249.469 515.976 253.399C511.701 254.16 507.032 254.421 503.318 252.018C501.124 250.599 499.489 248.385 497.936 246.195C494.385 241.189 490.998 236.047 487.782 230.784C486.092 228.018 484.416 225.132 483.842 221.88C482.321 213.268 488.771 205.534 495.146 200.078C509.798 187.536 526.955 178.399 545.107 173.47C548.321 172.598 551.728 171.859 554.912 172.85C560.079 174.458 563.168 180.085 565.139 185.471C567.111 190.856 568.649 196.748 572.589 200.687C573.489 201.587 580.253 212.412 577.376 217.66Z')
                     path(class='fill-base-100' fill-rule='evenodd' clip-rule='evenodd' d='M381.648 446.477C346.295 452.983 363.145 425.332 368.02 390.722C376.03 333.851 385.909 247.428 385.909 247.428C385.909 247.428 392.351 379.117 392.351 411.182C392.351 443.248 385.908 445.693 381.648 446.477Z')

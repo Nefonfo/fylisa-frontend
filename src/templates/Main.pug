@@ -1,24 +1,25 @@
 block variables
     - var title = 'Title Not Defined'
 doctype html
-html(lang="es" data-theme="fylight")
+html(lang="es" data-theme="light")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Filtración y Lubricación Industrial SA de CV es una empresa que se dedica a la manufactura de filtros y realización de servicios de mantenimiento y limpieza industrial.")
         title=title
         link(href='../css/index.css' rel='stylesheet')
+        link(rel="icon" type="image/x-icon" href="../assets/logo.ico")
         block extra_css
     body
         .drawer
-            input#navbar-menu.drawer-toggle(type='checkbox')
+            input#navbar-menu.drawer-toggle(type='checkbox' aria-label='menu mobile toggle')
             .drawer-content
                 include ../components/generic/navbar
                 include ../components/generic/alertBanner
                 block content
                 include ../components/generic/footer
                 include ../components/generic/cookiesAdvice
-                include ../components/generic/whatsappFab
             .drawer-side(class='lg:hidden')
                 label.drawer-overlay.bg-info(for='navbar-menu')
                 ul.menu.p-4.w-80.bg-base-100.text-base-content
@@ -31,17 +32,18 @@ html(lang="es" data-theme="fylight")
                             path(d='M804.25 271H826.803V104.414H804.25V271Z' fill='#2962FF')
                             path(d='M952.3 133.127C953.153 132.507 953.928 131.616 954.625 130.454L960.089 119.759C954.276 114.179 947.534 109.916 939.861 106.971C932.266 104.026 923.819 102.554 914.519 102.554C906.226 102.554 898.864 103.832 892.431 106.39C886.076 108.948 880.69 112.357 876.273 116.62C871.933 120.882 868.6 125.765 866.275 131.268C864.028 136.77 862.904 142.466 862.904 148.356C862.904 155.719 864.028 161.919 866.275 166.956C868.6 171.916 871.623 176.062 875.343 179.395C879.063 182.727 883.325 185.44 888.13 187.533C892.935 189.625 897.818 191.485 902.778 193.113C907.738 194.662 912.62 196.212 917.425 197.762C922.23 199.235 926.493 201.056 930.213 203.226C933.933 205.396 936.916 208.109 939.164 211.364C941.489 214.541 942.651 218.649 942.651 223.686C942.651 228.259 941.876 232.405 940.326 236.125C938.776 239.845 936.529 243.061 933.584 245.774C930.716 248.409 927.19 250.462 923.005 251.935C918.82 253.408 914.054 254.144 908.706 254.144C904.444 254.144 900.608 253.756 897.198 252.981C893.788 252.129 890.726 251.083 888.014 249.842C885.379 248.602 883.015 247.246 880.923 245.774C878.83 244.301 876.97 242.945 875.343 241.705C873.715 240.465 872.243 239.458 870.925 238.682C869.685 237.83 868.561 237.404 867.554 237.404C866.469 237.404 865.461 237.714 864.531 238.334C863.679 238.876 862.943 239.574 862.323 240.426L855.813 251.121C862.09 257.786 869.646 263.095 878.481 267.048C887.316 270.923 897.159 272.86 908.009 272.86C916.844 272.86 924.71 271.504 931.608 268.791C938.583 266.079 944.434 262.359 949.161 257.631C953.966 252.904 957.609 247.363 960.089 241.007C962.569 234.575 963.809 227.716 963.809 220.431C963.809 213.534 962.646 207.721 960.321 202.994C958.074 198.266 955.051 194.275 951.254 191.02C947.534 187.765 943.271 185.091 938.466 182.999C933.739 180.829 928.856 178.891 923.819 177.186C918.859 175.481 913.976 173.854 909.171 172.304C904.444 170.676 900.181 168.777 896.384 166.607C892.664 164.438 889.641 161.841 887.316 158.819C885.069 155.719 883.945 151.844 883.945 147.194C883.945 143.551 884.604 140.18 885.921 137.08C887.239 133.902 889.176 131.151 891.734 128.826C894.369 126.501 897.585 124.68 901.383 123.362C905.258 121.967 909.714 121.27 914.751 121.27C920.099 121.27 924.633 121.929 928.353 123.246C932.15 124.564 935.366 126.036 938.001 127.664C940.714 129.214 942.961 130.647 944.744 131.965C946.526 133.283 948.076 133.941 949.394 133.941C950.556 133.941 951.525 133.67 952.3 133.127Z' fill='#2962FF')
                             path(fill-rule='evenodd' clip-rule='evenodd' d='M1110.7 271H1128.13L1061.52 104.414H1038.74L972.126 271H989.564C991.501 271 993.129 270.458 994.446 269.373C995.764 268.288 996.655 267.048 997.12 265.653L1012.7 225.43H1087.45L1103.02 265.653C1103.64 267.203 1104.57 268.481 1105.81 269.489C1107.05 270.496 1108.68 271 1110.7 271ZM1055.01 141.381L1081.17 209.155H1018.97L1045.13 141.497C1046.84 137.312 1048.5 132.081 1050.13 125.804C1050.9 128.826 1051.72 131.694 1052.57 134.406C1053.42 137.041 1054.24 139.366 1055.01 141.381Z' fill='#2962FF')
-                        input(type='checkbox').toggle.toggle-secondary.switch-mode
+                        input(type='checkbox' aria-label='night mode switch').toggle.toggle-secondary.switch-mode
                     li
-                        a Inicio
+                        a(href='index.pug') Inicio
                     li
-                        a Nosotros
+                        a(href='aboutUs.pug') Nosotros
                     li
                         a Productos
                     li
                         a Servicios
                     li
                         a Contacto
+        include ../components/generic/whatsappFab
         script(src='../js/index.js' type='module')
         script(src='https://kit.fontawesome.com/0f31f6ce8c.js' crossorigin='anonymous')
         block extra_js

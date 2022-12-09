@@ -4,7 +4,7 @@ import {CookiesStorage, NightMode} from './utils'
 document.addEventListener('DOMContentLoaded', () => {
 
     new NightMode('fylisa-night', [
-        [document.querySelector('html'), 'data-theme', 'fylight', 'fydark'],
+        [document.querySelector('html'), 'data-theme', 'light', 'dark'],
     ], document.querySelectorAll('.switch-mode'))
 
     new CookiesStorage(

@@ -14,6 +14,12 @@ module.exports = {
         card: '0rem 0.308rem 0.308rem rgba(0, 0, 0, 0.25)',
         navbar: '0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);'
       },
+      fontSize: {
+        "6.5xl": "4rem",
+        "7.5xl": "5.25rem",
+        "8.5xl": "7rem",
+        "10xl": "9rem"
+      },
       fontFamily: {
         'sans': ['"Lato"', 'ui-sans-serif']
       }
@@ -22,33 +28,37 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        fylight: {
+        light: {
           "primary": "#0A1840",
-          "primary-content": "#BFCDF5",
+          "primary-content": "#FFFFFF",
           "secondary": "#2962FF",
-          "accent": "#0041E5",
-          "neutral": "#768FFF",
-          "base-100": "#FFFFFF",
-          "success": "#25D366",
+          "secondary-content": "#FFFFFF",
+          "accent": "#BFCDF5",
+          "accent-content": "#0A1840",
+          "neutral": "#6A80E6",
           "info": "#E2E2E2",
-          "warning": "#FACC15",
-          "error": "#F87171",
+          "info-content": "#0A1840",
+          "base-100": "#FFFFFF",
+          "base-200": "#A59D9D",
           "base-content": "#000000",
-          "base-300": "#777777",
+          "success": "#25D366",
+          "success-content": "#0F5428"
         },
-        fydark: {
+        dark: {
           "primary": "#BFCDF5",
-          "primary-content": "#0A1840",
+          "primary-content": "#000000",
           "secondary": "#4375FF",
-          "accent": "#0041E5",
-          "neutral": "#768FFF",
-          "base-100": "#000000",
-          "success": "#36DC73",
+          "secondary-content": "#000000",
+          "accent": "#0A1840",
+          "accent-content": "#BFCDF5",
+          "neutral": "#6A80E6",
           "info": "#2A2A2A",
-          "warning": "#EAB308",
-          "error": "#F87171",
+          "info-content": "#BFCDF5",
+          "base-100": "#000000",
+          "base-200": "#AEAEAE",
           "base-content": "#FFFFFF",
-          "base-300": "#777777",
+          "success": "#36DC73",
+          "success-content": "#FFFFFF"
         }
       }
     ]

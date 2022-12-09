@@ -58,7 +58,7 @@
     }
 
     .card__info__text {
-        @apply text-lg text-base-300 leading-tight mb-7 text-justify;
+        @apply text-lg text-base-200 leading-tight mb-7 text-justify;
 
         @media screen(lg) {
             @apply text-2xl;

@@ -1,0 +1,14 @@
+mixin banner(style, svg_image, image, text1, text1_size, text2, text2_size)
+    .w-full.flex.flex-wrap.justify-center.items-center.py-16(class=locals.bgStyler(style))
+        .w-full.flex.flex-wrap.justify-center.items-center.px-8(class="lg:justify-between max-w-7xl")
+            .w-full.flex.flex-wrap.justify-center.max-w-md(class="md:w-1/2")
+                if svg_image
+                    if svg_image==='engine_girl'
+                        include ../svg/engineGirl.svg.pug
+                else
+                    img(src=image)
+            h1.w-auto.flex.flex-wrap.flex-col.justify-center.mt-8(class="md:w-1/2 md:items-center lg:items-start lg:pl-10")
+                if text1
+                    span.font-light(class=`${locals.titleColorStyler(style, false)} ${locals.bannerSizeStyler(text1_size)}`)= text1
+                if text2
+                    span.font-medium.leading-none(class=`${locals.titleColorStyler(style, true)} ${locals.bannerSizeStyler(text2_size)}`)= text2
