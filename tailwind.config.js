@@ -8,6 +8,9 @@ module.exports = {
   plugins: [require("daisyui")],
   theme: {
     extend: {
+      colors: {
+       dark: '#000000'
+      },
       boxShadow: {
         button: '-0.5rem -0.5rem 0rem 0rem #768FFF, 0px 6.47936px 6.47936px rgba(0, 0, 0, 0.25)',
         buttonHover: '0.5rem 0.5rem 0rem 0rem #768FFF, 0px 10.47936px 10.47936px rgba(0, 0, 0, 0.25)',
@@ -35,14 +38,15 @@ module.exports = {
           "secondary-content": "#FFFFFF",
           "accent": "#BFCDF5",
           "accent-content": "#0A1840",
-          "neutral": "#6A80E6",
+          "neutral": "#768FFF",
+          "neutral-content": "#0A1840",
           "info": "#E2E2E2",
           "info-content": "#0A1840",
           "base-100": "#FFFFFF",
           "base-200": "#A59D9D",
           "base-content": "#000000",
           "success": "#25D366",
-          "success-content": "#0F5428"
+          "success-content": "#FFFFFF"
         },
         dark: {
           "primary": "#BFCDF5",
@@ -51,14 +55,15 @@ module.exports = {
           "secondary-content": "#000000",
           "accent": "#0A1840",
           "accent-content": "#BFCDF5",
-          "neutral": "#6A80E6",
+          "neutral": "#768FFF",
+          "neutral-content": "#0D0D0D",
           "info": "#2A2A2A",
           "info-content": "#BFCDF5",
           "base-100": "#000000",
           "base-200": "#AEAEAE",
           "base-content": "#FFFFFF",
           "success": "#36DC73",
-          "success-content": "#FFFFFF"
+          "success-content": "#0F5428"
         }
       }
     ]

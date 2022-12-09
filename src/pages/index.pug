@@ -50,7 +50,7 @@ block content
         null,
         'Tenemos la solución que requieres'
     )
-        each card in locals.filterSlider
+        each card in locals.fixtures.filterSlider
             +card(
                 card.title,
                 card.description,
@@ -64,7 +64,7 @@ block content
         'Servicios',
         'El mejor mantenimiento para tu equipo'
     )
-        each card in locals.serviceSlider
+        each card in locals.fixtures.serviceSlider
             +card(
                 card.title,
                 card.description,

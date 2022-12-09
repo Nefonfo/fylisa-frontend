@@ -2,6 +2,8 @@ extends ../templates/Main
 
 include ../components/generic/banner
 include ../components/generic/featuresBanner
+include ../components/generic/featureCard
+include ../components/generic/contactBanner.pug
 
 block variables
     - let title = 'FYLISA - Sobre Nosotros'
@@ -29,3 +31,19 @@ block content
             h3.mt-4.text-center(class="md:text-xl") Mantenimiento, limpieza y reparación de filtros
 
     +featuresBanner('neutral', null, null)
+        each card in locals.fixtures.aboutUsBanner
+            +featureCard(
+                'neutral',
+                card.icon,
+                card.title,
+                card.text
+            )
+    +featuresBanner('white', '¿Porqué', 'Nosotros?')
+        each card in locals.fixtures.whyUsBanner
+            +featureCard(
+                'white',
+                card.icon,
+                card.title,
+                card.text
+            )
+    +contact_banner('Contactanos', 'Nos interesan tus necesidades', 'Contacto', '#!')
