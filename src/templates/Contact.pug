@@ -1,0 +1,45 @@
+extends ../templates/Main
+
+include ../components/generic/contact/contactIcon
+
+block variables
+    - let title = 'FYLISA - Contactanos'
+    - let extra_classes = 'bg-primary'
+
+block content
+    .w-full.flex.flex-wrap.flex-col.justify-center.items-center.px-8.pt-8
+        h1.font-bold.text-5xl.text-primary-content Contactanos
+        p.mt-4.text-2xl.text-center.text-accent Para nosotros es importante saber tus necesidades
+
+    .w-full.flex.flex-wrap.items-center.justify-center.px-3.mt-8.mb-16(class="md:px-10")
+        .w-full.flex.flex-wrap.justify-center.items-center(class="max-w-7xl")
+            .w-full.flex.flex-wrap.items-center.justify-center.shadow-card.rounded-xl.py-6.px-8.bg-primary-content(class="lg:order-2 md:px-12 lg:w-1/2")
+                block contact_content
+            .w-full.flex.flex-wrap.bg-neutral.shadow-card.rounded-xl.py-6.px-8.mt-8(class="lg:mt-0 lg:rounded-l-xl lg:rounded-r-none lg:w-min lg:pr-16 lg:order-1")
+                h1.mb-6.font-semibold.text-2xl.text-base-content Otros medios de contacto
+                .w-full.flex.flex-wrap.flex-col
+                    +contactIcon(
+                        'fa-phone-alt',
+                        '+525560103852',
+                        'tel:+525560103852'
+                    )
+                    +contactIcon(
+                        'fa-phone-alt',
+                        '+5212345678',
+                        'tel:+5212345678'
+                    )
+                    +contactIcon(
+                        'fa-envelope',
+                        'fylisa@prodigy.net.mx',
+                        'mailto:fylisa@prodigy.net.mx'
+                    )
+                    +contactIcon(
+                        'fa-map-marker-alt',
+                        'Ver en google.maps',
+                        'https://maps.google'
+                    )
+                .w-full.flex.flex-wrap.flex-col.justify-center.items-center.mt-6.mb-2.text-primary-content
+                    h1.text-lg Siguenos en
+                    .flex.flex-row.mt-2
+                        a(href='#!' class='fab fa-facebook-f').mx-2.fa-2x
+                        a(href='#!' class='fab fa-twitter').mx-2.fa-2x

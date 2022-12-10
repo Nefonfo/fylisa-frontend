@@ -1,0 +1,15 @@
+extends ../templates/Contact
+
+block contact_content
+    .w-full.flex.flex-wrap.py-8.justify-center
+        .w-full.flex.flex-wrap.justify-center.items-center
+            .w-20
+                include ../components/svg/logo.svg.pug
+        .w-full.flex.flex-wrap.justify-center.items-center.max-w-sm.my-9
+            h1.text-3xl.text-center.text-base-content(class="md:text-4xl") Gracias por contactarnos
+
+        .w-full.flex.flex-wrap.justify-center.items-center
+            .w-52
+                include ../components/svg/envelope.svg.pug
+        w.full.flex.flex-wrap.mt-9
+            h3.text-2xl.text-center.text-base-content(class="md:text-2xl") En breve nos pondremos en contacto contigo

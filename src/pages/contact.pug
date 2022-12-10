@@ -1,0 +1,48 @@
+extends ../templates/Contact
+
+include ../components/inputs/inputControl
+include ../components/inputs/textareaControl
+include ../components/inputs/selectControl
+
+block contact_content
+    h1.w-full.text-left.font-semibold.text-2xl.text-base-content Información Personal
+        form.w-full.py-2(action="./contactSuccess.html" method="GET" novalidate)
+            +inputControl(
+                'representative_name',
+                'Nombre del Representante',
+                'text',
+                true,
+                'El nombre del representante es requerido'
+            )
+            +inputControl(
+                'company',
+                'Compañia',
+                'text',
+                false,
+                null
+            )
+            +inputControl(
+                'email',
+                'Correo Electrónico',
+                'email',
+                'Debe ingresar un correo válido'
+            )
+            +selectControl(
+                'interested',
+                'Interesado en ...',
+                true,
+                'Seleccione un valor válido',
+                '--- SELECCIONA UN VALOR ---',
+                'Elementos Filtrantes',
+                'Servicios en planta',
+                'Servicios de laboratorio'
+            )
+            +textareaControl(
+                'message',
+                'Mensaje',
+                'Describa lo que necesita',
+                false,
+                null
+            )
+            .w-full.flex.justify-center.items-center.mt-7
+                button.btn-fylisa(type="submit") Contactar

@@ -1,5 +1,5 @@
-mixin slider_banner(bg_color, text_color, title, text)
-    .flex.flex-wrap.flex-col.justify-center.items-center(class=bg_color+" "+text_color+" "+(!title || !text ? 'py-3 md:py-6': ''))
+mixin slider_banner(style, title, text)
+    .flex.flex-wrap.flex-col.justify-center.items-center(class=locals.stylers.sliderBgStyler(style)+" "+locals.stylers.sliderColorStyler(style)+" "+(!title || !text ? 'py-3 md:py-6': ''))
         if title
             h3.font-bold.text-center.mt-8(class='text-7xl md:text-8xl')= title
         if text

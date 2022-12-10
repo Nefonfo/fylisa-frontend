@@ -1,40 +1,42 @@
 extends ../templates/Main
 
 include ../components/generic/banner
-include ../components/generic/smallBanner
+include ../components/generic/features/featuresBanner
+include ../components/generic/features/featureCard
 include ../components/generic/slider/sliderBanner
 include ../components/generic/slider/card
 include ../components/generic/contact/contactBanner
 
 block variables
-    - let title = 'FYLISA - Nuestros Productos'
+    - let title = 'FYLISA - Nuestros Servicios'
 
 block extra_css
     link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
 
 block content
     +banner(
-        'blue',
+        'white',
         null,
-        '../assets/filters/filter_banner_products.png',
+        '../assets/services/cleaning_service.png',
         'Nuestros',
         'medium',
-        'Productos',
+        'Servicios',
         'large'
     )
-    +smallBanner(
-        'neutral',
-        'Contamos con una amplia variedad de modelos y también a la medida',
-        'medium',
-        'filterNeutral',
-        null
-        )
+    +featuresBanner('blue', '¿Porqué', 'Nosotros?')
+        each card in locals.fixtures.whyUsServiceBanner
+            +featureCard(
+                'blue',
+                card.icon,
+                card.title,
+                card.text
+            )
     +slider_banner(
-        'info',
+        'neutral',
         null,
-        'Tenemos la solución que requieres'
+        'Algunos de nuestros servicios'
     )
-        each card in locals.fixtures.filterSlider
+        each card in locals.fixtures.serviceSlider
             +card(
                 card.title,
                 card.description,

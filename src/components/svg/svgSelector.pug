@@ -1,0 +1,12 @@
+mixin svgSelector(svg)
+    case svg
+        when 'engineGirl'
+            include ../svg/engineGirl.svg.pug
+        when 'filter'
+            include ../svg/filter.svg.pug
+        when 'filterNeutral'
+            include ../svg/filterNeutral.svg.pug
+        when 'filterEngine'
+            include ../svg/filterEngine.svg.pug
+        default
+            h1 SVG NOT SELECTED

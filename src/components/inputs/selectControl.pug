@@ -1,0 +1,13 @@
+mixin selectControl(control_name, name, required, error, ...options)
+    .w-full.flex.flex-col.py-2
+        .form-control.w-full
+            label.label
+                span.label-text(class=`${error ? 'text-error': ''}`)=name
+                if required
+                    span.label-text(class=`${error ? 'text-error': ''}`) Requerido
+            select.select.select-bordered(name=control_name class=`${error ? 'select-error': ''}`)
+                each option_var in options
+                    option= option_var
+            label.label
+                if error
+                    span.label-text-alt.text-error(for=control_name)=error

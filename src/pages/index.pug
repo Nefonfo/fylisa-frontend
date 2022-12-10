@@ -1,8 +1,8 @@
 extends ../templates/Main
 
-include ../components/generic/sliderBanner
-include ../components/generic/card.pug
-include ../components/generic/contactBanner.pug
+include ../components/generic/slider/sliderBanner
+include ../components/generic/slider/card
+include ../components/generic/contact/contactBanner
 
 block variables
     - let title = 'FYLISA - Bienvenido'
@@ -45,8 +45,7 @@ block content
                     img(src='../assets/filters/filter_image.png' alt="filter")
 
     +slider_banner(
-        'bg-info',
-        'text-info-content',
+        'info',
         null,
         'Tenemos la solución que requieres'
     )
@@ -59,8 +58,7 @@ block content
                 card.image
             )
     +slider_banner(
-        'bg-neutral',
-        'text-base-100',
+        'neutral',
         'Servicios',
         'El mejor mantenimiento para tu equipo'
     )

@@ -1,0 +1,11 @@
+mixin inputControl(control_name, name, type, required, error)
+    .w-full.flex.flex-col.py-2
+        .form-control.w-full
+            label.label
+                span.label-text(for=control_name, class=`${error ? 'text-error': ''}`)=name
+                if required
+                    span.label-text-alt(class=`${error ? 'text-error': ''}`, for=control_name) Requerido
+            input.input.input-bordered.w-full(name=control_name class=`${error ? 'input-error': ''}` type=type required=required)
+            if error
+                label.label
+                    span.label-text-alt.text-error(for=control_name)=error

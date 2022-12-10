@@ -1,9 +1,10 @@
 extends ../templates/Main
 
 include ../components/generic/banner
-include ../components/generic/featuresBanner
-include ../components/generic/featureCard
-include ../components/generic/contactBanner.pug
+include ../components/generic/features/featuresBanner
+include ../components/generic/features/featureCard
+include ../components/generic/contact/contactBanner
+include ../components/svg/svgSelector
 
 block variables
     - let title = 'FYLISA - Sobre Nosotros'
@@ -23,11 +24,11 @@ block content
             p.text-center.font-semibold.text-lg.mb-8.text-base-100(class="md:text-3xl md:max-w-3xl") Somos una empresa fundada en 1986 con la misión de dar soluciones de limpieza y mantenimiento a equipos industriales
         .w-full.flex.flex-wrap.flex-col.justify-between.items-center.my-6.text-base-100(class="md:mt-10 md:w-1/4 lg:w-1/6")
             .w-32.h-auto(class="md:w-48")
-                include ../components/svg/filter.svg.pug
+                +svgSelector('filter')
             h3.mt-4.text-center(class="md:text-xl") Manufactura de Filtros
         .w-full.flex.flex-wrap.flex-col.justify-between.items-center.my-6.text-base-100(class="md:mt-10 md:w-1/4 lg:w-1/6")
             .w-32.h-auto(class="md:w-48")
-                include ../components/svg/filterEngine.svg.pug
+                +svgSelector('filterEngine')
             h3.mt-4.text-center(class="md:text-xl") Mantenimiento, limpieza y reparación de filtros
 
     +featuresBanner('neutral', null, null)

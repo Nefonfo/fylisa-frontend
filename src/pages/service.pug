@@ -1,0 +1,25 @@
+extends ../templates/Main
+
+include ../components/generic/banner
+include ../components/generic/smallBanner
+
+block variables
+    - let title = 'FYLISA - Limpieza'
+
+block content
+    +banner(
+        'blue',
+        null,
+        '../assets/services/cleaning_service.png',
+        null,
+        null,
+        'Centrifugación',
+        'extra-small'
+    )
+    +smallBanner(
+        'white',
+        'Cuando se trata de filtros, tenemos una gran variedad los cuales manufacturamos o en caso que el cliente lo desee, de alguna marca diferente',
+        'medium',
+        null,
+        '../assets/services/cleaning_service_4.png '
+    )
