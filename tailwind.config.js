@@ -3,7 +3,7 @@ module.exports = {
   mode: 'jit',
   darkMode: 'class',
   content: [
-      './src/**/*.{js,pug,css}'
+      './src/**/*.{js,pug,css,jsx}'
   ],
   plugins: [require("daisyui")],
   theme: {

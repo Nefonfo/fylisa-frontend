@@ -5,3 +5,5 @@ node_modules/
 parcel-bundle-reports/
 yarn.lock
 .DS_Store
+.env.local
+.env
