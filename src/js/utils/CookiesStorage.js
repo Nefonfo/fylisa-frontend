@@ -16,8 +16,8 @@ export class CookiesStorage {
                 expires: date
             })
             this.hideAdvice()
-        });
-        if(this.getState()['value']) {
+        })
+        if (this.getState()['value']) {
             this.hideAdvice()
         } else {
             this.showAdvice()
@@ -32,7 +32,7 @@ export class CookiesStorage {
         this.alert_element.classList.remove(this.unactive_class)
     }
 
-    expired(date_to_check){
+    expired(date_to_check) {
         let today = new Date()
         return date_to_check.setHours(0, 0, 0, 0) <= today.setHours(0, 0, 0, 0)
     }
@@ -40,20 +40,20 @@ export class CookiesStorage {
     getState() {
         let data
         try {
-            data = JSON.parse(localStorage.getItem(this.storage));
-            if(typeof data.value !== 'boolean') {
+            data = JSON.parse(localStorage.getItem(this.storage))
+            if (typeof data.value !== 'boolean') {
                 data = null
             }
-            if(data.expires !== null) {
-                if(isNaN(Date.parse(data.expires)) || this.expired(new Date(Date.parse(data.expires)))) {
+            if (data.expires !== null) {
+                if (isNaN(Date.parse(data.expires)) || this.expired(new Date(Date.parse(data.expires)))) {
                     data = null
                 }
             }
 
-        } catch(e){
+        } catch (e) {
             data = null
         }
-        if(data === null) {
+        if (data === null) {
             this.setState({
                 value: false,
                 expires: null
@@ -64,7 +64,7 @@ export class CookiesStorage {
         }
     }
 
-    setState(mode){
+    setState(mode) {
         localStorage.setItem(this.storage, JSON.stringify(mode))
     }
 }

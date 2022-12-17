@@ -23,6 +23,8 @@ block content
         null,
         '../assets/services/cleaning_service_4.png '
     )
+    // GALLERY BEGIN
     .w-full.flex.flex-wrap.react-gallery(data-tag='Servicios' data-title='Galería')
+    // GALLERY END
 block extra_js
-    script(src='../js/gallery/gallery.jsx' type='module')
+    script(src='../js/gallery/gallery.jsx' type='module' defer)

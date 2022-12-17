@@ -1,4 +1,5 @@
 mixin textareaControl(control_name, name, placeholder, required, error)
+    // TEXTAREA CONTROL BEGIN
     .w-full.flex.flex-col.py-2
         .form-control
             label.label
@@ -9,3 +10,4 @@ mixin textareaControl(control_name, name, placeholder, required, error)
             if error
                 label.label
                     span.label-text-alt.text-error(for=control_name)=error
+    // TEXTAREA CONTROL END

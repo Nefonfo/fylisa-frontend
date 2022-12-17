@@ -1,4 +1,5 @@
 mixin card(title, text, btn_text, url, img)
+    // SLIDER CARD BEGIN
     .swiper-slide.flex.justify-center
         .card
             .card__content
@@ -11,3 +12,4 @@ mixin card(title, text, btn_text, url, img)
                     .card__info__text= text
                     .card__info__links
                         a.btn-fylisa(href=url)= btn_text
+    // SLIDER CARD END

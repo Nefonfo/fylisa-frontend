@@ -19,6 +19,7 @@ block content
         'Somos?',
         'extra-large'
     )
+    // WE ARE BANNER BEGIN
     .w-full.flex.flex-wrap.bg-primary.px-4.py-10(class="md:py-16 md:justify-evenly md:items-stretch")
         .w-full.flex.flex-wrap.justify-center.items-center
             p.text-center.font-semibold.text-lg.mb-8.text-base-100(class="md:text-3xl md:max-w-3xl") Somos una empresa fundada en 1986 con la misión de dar soluciones de limpieza y mantenimiento a equipos industriales
@@ -30,7 +31,7 @@ block content
             .w-32.h-auto(class="md:w-48")
                 +svgSelector('filterEngine')
             h3.mt-4.text-center(class="md:text-xl") Mantenimiento, limpieza y reparación de filtros
-
+    // WE ARE BANNER END
     +featuresBanner('neutral', null, null)
         each card in locals.fixtures.aboutUsBanner
             +featureCard(

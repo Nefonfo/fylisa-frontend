@@ -6,4 +6,4 @@ parcel-bundle-reports/
 yarn.lock
 .DS_Store
 .env.local
-.env
+.env.production

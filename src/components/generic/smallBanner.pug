@@ -1,6 +1,7 @@
 include ../svg/svgSelector
 
 mixin smallBanner(style, text, text_size, svg, image)
+    // SMALL BANNER BEGIN
     .flex.flex-wrap.justify-center.items-center.p-8(class=locals.stylers.bgStyler(style))
         .w-full.flex.items-center.justify-around.flex-wrap(class="max-w-7xl")
             if svg
@@ -12,3 +13,4 @@ mixin smallBanner(style, text, text_size, svg, image)
                         source(srcset=image+'?as=webp' alt="filter")
                         img(src=image alt="filter")
             p.py-4.font-bold.text-center(class="leading-relaxed md:leading-relaxed lg:leading-relaxed md:text-left md:px-16 md:w-3/5 md:order-1 "+locals.stylers.featureColorStyler(style, true)+" "+locals.stylers.smallBannerSizeStyler(text_size))= text
+    // SMALL BANNER END

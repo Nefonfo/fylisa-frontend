@@ -21,8 +21,10 @@ block content
         'Cuando se trata de filtros, tenemos una gran variedad los cuales manufacturamos o en caso que el cliente lo desee, de alguna marca diferente',
         'medium',
         null,
-        '../assets/filters/filter_banner_products.png '
+        '../assets/filters/filter_banner_products.png'
     )
+    // GALLERY BEGIN
     .w-full.flex.flex-wrap.react-gallery(data-tag='Filtros' data-title='Galería')
+    // GALLERY END
 block extra_js
-    script(src='../js/gallery/gallery.jsx' type='module')
+    script(src='../js/gallery/gallery.jsx' type='module' defer)

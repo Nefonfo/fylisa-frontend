@@ -10,6 +10,7 @@ block variables
 block extra_css
     link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
 block content
+    // IMPACT BANNER BEGIN
     style.
         .fylisa-bg-banner {
             background-image: url('../assets/filters/banner_filter_sm.png?as=webp');
@@ -33,7 +34,9 @@ block content
             h1(class="mb-1.5 md:pl-12 text-7xl md:text-9xl font-medium text-neutral") Vida
             h1(class="mb-1.5 text-4xl md:text-6xl font-light") a tus
             h1(class="text-5xl pl-3 md:pl-36 md:text-7xl font-bold text-secondary") Máquinas
+    // IMPACT BANNER END
 
+    // PRESENTATION BANNER BEGIN
     .w-full.flex.justify-center.items-center.py-6.bg-primary.text-primary-content.font-bold
         .flex.flex-col(class="md:flex-row max-w-7xl")
             .w-full.flex.flex-col.justify-center.items-center.px-6(class="md:w-1/2 lg:flex-grow md:items-start md:px-20")
@@ -43,6 +46,7 @@ block content
                 picture
                     source(srcset='../assets/filters/filter_image.png?as=webp' alt="filter")
                     img(src='../assets/filters/filter_image.png' alt="filter")
+    // PRESENTATION BANNER END
 
     +slider_banner(
         'info',

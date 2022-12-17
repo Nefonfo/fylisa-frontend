@@ -1,4 +1,5 @@
 mixin slider_banner(style, title, text)
+    // SLIDER BANNER BEGIN
     .flex.flex-wrap.flex-col.justify-center.items-center(class=locals.stylers.sliderBgStyler(style)+" "+locals.stylers.sliderColorStyler(style)+" "+(!title || !text ? 'py-3 md:py-6': ''))
         if title
             h3.font-bold.text-center.mt-8(class='text-7xl md:text-8xl')= title
@@ -11,3 +12,4 @@ mixin slider_banner(style, title, text)
                     .card.more.flex.flex-col.justify-center.items-center
                         i.fas.fa-arrow-right.fa-6x.mb-4
                         p.text-3xl Ver más
+    // SLIDER BANNER END

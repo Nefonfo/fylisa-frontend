@@ -1,4 +1,5 @@
 mixin inputControl(control_name, name, type, required, error)
+    // INPUT CONTROL BEGIN
     .w-full.flex.flex-col.py-2
         .form-control.w-full
             label.label
@@ -9,3 +10,4 @@ mixin inputControl(control_name, name, type, required, error)
             if error
                 label.label
                     span.label-text-alt.text-error(for=control_name)=error
+    // INPUT CONTROL ENDS

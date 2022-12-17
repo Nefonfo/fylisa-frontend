@@ -1,5 +1,7 @@
 mixin featureCard(style, icon, title, text)
+    // FEATURE CARD BEGIN
     .w-full.flex.flex-wrap.flex-col.justify-center.items-center(class="md:w-1/3 px-6")
         .fa-4x(class=icon+" "+locals.stylers.featureColorStyler(style, true))
         h3.font-extrabold.text-2xl.my-4(class=locals.stylers.featureColorStyler(style, true))= title
         p.text-lg.text-center.font-medium.leading-tight(class=locals.stylers.featureColorStyler(style, false))= text
+    // FEATURE CARD END

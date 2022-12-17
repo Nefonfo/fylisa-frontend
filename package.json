@@ -2,18 +2,19 @@
   "name": "fylisa-frontend",
   "version": "0.0.1",
   "description": "Frontend design for Fylisa Web",
-  "main": "index.js",
   "author": "Nefonfo",
   "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "rm -rf .parcel-cache/ && parcel src/pages/*.pug",
-    "build": "parcel 'build src/pages/*.pug' --reporter @parcel/reporter-bundle-analyzer"
+    "build": "rm -rf .parcel-cache/ && rm -rf dist/ && parcel build 'src/pages/*.pug' --no-scope-hoist --public-url ./"
   },
   "devDependencies": {
     "@parcel/reporter-bundle-analyzer": "^2.8.0",
     "@parcel/transformer-pug": "2.8.0",
+    "@parcel/transformer-sass": "2.8.0",
     "autoprefixer": "^10.4.13",
+    "os-browserify": "^0.3.0",
     "parcel": "^2.8.0",
     "path-browserify": "^1.0.0",
     "postcss": "^8.4.19",
@@ -29,6 +30,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
-    "react-responsive-masonry": "^2.1.6"
+    "react-responsive-masonry": "^2.1.6",
+    "react-simple-image-viewer": "^1.2.2"
   }
 }

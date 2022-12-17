@@ -1,4 +1,5 @@
 mixin selectControl(control_name, name, required, error, ...options)
+    // SELECT CONTROL BEGIN
     .w-full.flex.flex-col.py-2
         .form-control.w-full
             label.label
@@ -11,3 +12,4 @@ mixin selectControl(control_name, name, required, error, ...options)
             label.label
                 if error
                     span.label-text-alt.text-error(for=control_name)=error
+    // SELECT CONTROL END

@@ -1,6 +1,7 @@
 include ../svg/svgSelector
 
 mixin banner(style, svg_image, image, text1, text1_size, text2, text2_size)
+    // BANNER BEGIN
     .w-full.flex.flex-wrap.justify-center.items-center.py-16(class=locals.stylers.bgStyler(style))
         .w-full.flex.flex-wrap.justify-center.items-center.px-8(class="lg:justify-between max-w-7xl")
             if svg_image
@@ -16,3 +17,5 @@ mixin banner(style, svg_image, image, text1, text1_size, text2, text2_size)
                     span.font-light(class=`${locals.stylers.titleColorStyler(style, false)} ${locals.stylers.bannerSizeStyler(text1_size)}`)= text1
                 if text2
                     span.font-medium.leading-none(class=`${locals.stylers.titleColorStyler(style, true)} ${locals.stylers.bannerSizeStyler(text2_size)}`)= text2
+
+    // BANNER END

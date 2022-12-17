@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#cookies_advice_accept'),
         'fylisa-cookies-accept',
         'hidden',
-    );
+    )
 
     drawerListener()
     swiperInit()
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const swiperInit = () => {
-    if(typeof Swiper !== 'undefined'){
-        new Swiper(".swiper-container", {
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.swiper-container', {
             loop: false,
             freeMode: true,
             spaceBetween: 0,
@@ -48,7 +48,7 @@ const swiperInit = () => {
                     slidesPerView: 2.8
                 }
             }
-        });
+        })
     }
 }
 
@@ -56,6 +56,6 @@ const drawerListener = () => {
     const drawerInput = document.querySelector('#navbar-menu')
 
     window.addEventListener('resize', () => {
-        drawerInput.checked = false;
+        drawerInput.checked = false
     })
 }
