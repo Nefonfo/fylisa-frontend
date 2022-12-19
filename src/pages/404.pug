@@ -1,0 +1,14 @@
+extends ../templates/Main
+
+block variables
+    - let title = '404 Page Not Found'
+
+block content
+    .w-full.py-12.flex.flex-wrap.justify-center.items-center.text-primary(class='min-h-[78vh]')
+        .w-full.flex.gap-x-10.justify-center.items-center.text-8xl.font-bold.max-w-7xl(class="md:text-10xl")
+            h1 4
+            i.fas.fa-ghost
+            h1 4
+        .w-full.flex.flex-wrap.flex-col.justify-center.items-center.gap-y-10
+            p.mb-8.text-lg.font-bold.text-center.max-w-7xl(class="md:mb-10 md:text-5xl") Lo que buscas desapareció misteriosamente...
+            a.btn-fylisa(href="index.pug") Regresar

@@ -1,0 +1,30 @@
+extends ../templates/Main
+
+block variables
+    - let title = 'FYLISA - Información Importante'
+    - let extra_classes = 'bg-info'
+
+block content
+    .w-full.flex.flex-wrap.items-center.justify-center.my-10
+        h1.font-bold.text-4xl.text-primary Aviso a Clientes
+    .w-full.flex.flex-wrap.justify-center.items-center.my-10.px-2
+        .w-full.rounded-xl.shadow-card.py-8.px-10.leading-relaxed.bg-primary-content.text-base-content(class="md:text-xl md:max-w-6xl")
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet rutrum nisl, in mollis mauris. Cras fringilla enim at enim euismod congue.
+            br
+            p Praesent ut aliquet elit. Praesent a mollis justo.
+                b Proin vitae facilisis quam.
+                |  Maecenas elementum nunc quis nisl consequat, non facilisis dolor feugiat.
+            p Donec quis magna nec mauris accumsan gravida. Sed id nibh sed nunc commodo consequat at at lorem.
+            br
+            .w-full.flex.justify-center
+                img.w-32(class="md:w-52" src='../assets/filters/blank_filter.png', alt="sample image")
+            br
+            p Nam pretium nisi vitae eros commodo, at rhoncus nibh luctus. Mauris sit amet mauris nec leo suscipit efficitur eu quis risus.
+            br
+            h1.text-lg(class="md:text-2xl")
+                b Atte.
+            h1.text-lg(class="md:text-2xl")
+                b Ing. Victor Armenta
+            h1.text-lg(class="md:text-2xl")
+                b
+                    i Gerente General
